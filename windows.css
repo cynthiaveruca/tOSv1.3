@@ -1,0 +1,109 @@
+@import "var.css";
+.dialogue {
+    flex-direction: column;
+    border-radius: 3px;
+    font-weight: normal;
+    letter-spacing:0.006em;
+    padding-bottom: 10px;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.74);
+    box-shadow: var(--drop-shadow);
+    display: inline-flex;   
+    font-size: 14px;
+}
+/**/
+.window {
+    position: absolute;
+    background-color: hsla(220, 21%, 100%, 1);
+    box-sizing: border-box;
+    z-index: 9;
+    height: auto;
+    border-radius: 3px;
+    border: Solid 1px rgba(0, 0, 0, 0.32);
+    box-shadow: var(--drop-shadow);
+}
+
+.window-title {
+    /*Contains elements common in both the dark & bright modes*/
+    display: grid;
+    position: relative;
+    background-color: #f6f2f2;
+    box-sizing: border-box;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 15px auto;
+    /*grid-row-gap: 3px;*/
+    color: rgba(80,80,80,1);
+    z-index:9;
+    font-family: Inter, sans-serif;
+    align-items: center;
+    min-height: 18px;
+    white-space: nowrap;
+    min-width:200px;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 1px 5px 1px 5px;
+    box-shadow: inset 0px 1px 0 0px rgb(255 255 255 / 50%), 0 1px 0 0 rgb(134 134 134 / 50%), 0 1px 2px rgb(0 0 0 / 50%);
+    color: rgb(104, 104, 104);
+    border-radius: 3px 3px 0 0;
+    user-select: none;
+    transition: height .5s ease-in-out;
+    justify-content: center;
+}
+.window-icon {
+    display: flex;
+    padding: 0 1px;
+}
+.window-info {
+    display: flex;
+}
+.st-Path-cont {
+    user-select: none;
+    padding: 5px;
+    box-sizing: border-box;
+    justify-content: center;
+    border-top: none;
+    height: 100%;
+    background: transparent;
+}
+.dialogue .titleBar {
+    height: 20px;
+    display: flex;
+    position: relative;
+    border-radius: 3px 3px 0 0;
+    padding: 0 5px;
+    align-items: center;
+    color: rgba(255,255,255,.9);
+    background: rgba(0,0,0,.7);
+}
+.dialogue .titleBar > .windowClose {
+    display: flex;
+    position: absolute;
+    right: 5px;
+    width: 12px;
+    height: 12px;
+    justify-self: flex-end;
+    background-color: tomato;
+    margin-left: 10px;
+}
+.preview-tooltip {
+    top: 5px;
+    left: 5px;
+    width: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-family: "Nimbus Sans L", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 5px 10px 6px 10px;
+    color: rgba(0,0,0,.7);
+    border: Solid 1px #e2941d;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 50%), 0 1px 2px rgb(0 0 0 / 30%);
+    background-color: #f8d394;
+    margin: 10px;
+    letter-spacing: -.3px;
+}

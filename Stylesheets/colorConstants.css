@@ -1,0 +1,59 @@
+:root {
+    --orange-100: rgba(255, 223, 206, 0.67);
+    --orange-200: #ffdfce;
+    --orange-300: #ffc8af;
+    --orange-500: #ff7537;
+    --orange-700: #d24625;
+
+    --red-000: #db231642;
+    --red-100: #e93f2f5d;
+    --red-300: #e67c73;
+    --red-500: #db4437;
+    --red-600: #d64137;
+    --red-700: #71170d;
+
+    --blue-000: #d2e2ff;
+    --blue-100: hsla(217deg, 89%, 61%, 50%);
+    --blue-200: #2196f3;
+    --blue-300: #7baaf7;
+    --blue-500: #4285f4;
+    --blue-700: #3367d6;
+    --blue-900: #306ABF;
+
+    --green-000: #e6f4ea;
+    --green-100: #b7e1cd;
+    --green-200: #cbfecc;
+    --green-300: #57bb8a;
+    --green-500: #0f9d58;
+    --green-700: #0b8043;
+
+    --yellow-000: #faf4e1;
+    --yellow-100: #fce8b2;
+    --yellow-300: #f7cb4d;
+    --yellow-500: #f4b400;
+    --yellow-700: #f09300;
+    --yellow-900: #812e00;
+
+    --grey-000: #ffffff;
+    --grey-100: #f5f5f5;
+    --grey-300: #e0e0e0;
+    --grey-500: #9e9e9e;
+    --grey-700: #616161;
+
+    --purple-000: rgba(97, 75, 206, 0.3);
+    --purple-100: hsla(250, 90%, 65%, .5);
+    --purple-300: hsl(250, 73%, 76%);
+    --purple-500:hsl(250, 44%, 50%);
+    --purple-700:hsl(250, 62%, 41%);
+    --purple-900: rgb(47, 27, 145);
+
+   --scheme: purple;
+
+    --primary-500: var(--red-500);
+    --primary-200: var(--red-200);
+    --primary-100: var(--red-100);
+    --primary-300: var(--red-300);
+    --primary-700: var(--red-700);
+    --primary-900: var(--red-900);
+    --primary-000: var(--red-000)
+}

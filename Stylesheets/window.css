@@ -1,0 +1,277 @@
+/*Child Elements of Window Title
+    - TODO : WindowTitle, WindowSubtitle
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Window*/
+
+.st {
+    /*border: Solid 1px #c4c4c4;*/
+    box-shadow: 0 1px 5px 1px rgb(170 170 170 / 50%);
+    display: inline-flex;
+    border-radius: 4px;
+    flex-direction: column;
+    height: 130px;
+}
+.window:focus, .window:focus-within {
+    z-index: 10;
+}
+.st-Path {
+    border-radius: 3px 3px 0 0;
+    height: 18px;
+    user-select: none;
+    z-index: 1;
+    box-shadow: inset 0px 1px 0 0px rgba(255,255,255,.5), 0 1px 0 0 rgba(134, 134, 134, .5), 0 1px 2px rgba(0,0,0,.5);
+    display: inline-flex;
+    background: -moz-linear-gradient(50% 100% 90deg,rgba(244, 244, 244, 1) 0%,rgba(237, 237, 237, 1) 100%);
+    background: -webkit-linear-gradient(
+            90deg, rgba(244, 244, 244, 1) 0%    , rgba(237, 237, 237, 1) 100%);
+    background: -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0,rgb(244, 244, 244) ),color-stop(1,rgb(237, 237, 237) ));
+    background: -o-linear-gradient(90deg, rgba(244, 244, 244, 1) 0%, rgba(237, 237, 237, 1) 100%);
+    background: -ms-linear-gradient(90deg, rgba(244, 244, 244, 1) 0%, rgba(237, 237, 237, 1) 100%);
+    justify-content: center;
+    font-size: 14px;
+    align-items: center;
+    padding: 1px 10px 1px 10px;
+    font-weight: 600;
+    text-shadow: 0 1px 1px rgb(245,245,245);
+    color: rgb(104, 104, 104);
+}
+.title-dark {
+    display: flex;
+    background-color: #3c3f41;
+    background-image: linear-gradient(90deg, #4c4c4c, rgba(17, 17, 17, 1), #4C4C4C);
+    box-shadow: inset 0 -1px 1px rgb(255 255 255 / 40%), 0 3px 5px rgb(0 0 0 / 60%), inset 0 -1px 1px rgb(90 90 90 / 90%);
+    color: #cbcbcb;
+    font-weight: 500;
+}
+.st-Path-cont {
+    user-select: none;
+    padding: 5px;
+    box-sizing: border-box;
+    justify-content: center;
+    border-top: none;
+    height: 100%;
+    background: transparent;
+}
+
+.window {
+    position: absolute;
+    background-color: hsla(220, 21%, 100%, 1);
+    box-sizing: border-box;
+    z-index: 9;
+    height: auto;
+    border-radius: 3px;
+
+    border: Solid 1px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.26);
+    /*box-shadow: 0 10px 10px rgba(3,0,0,.6),  0 1px 4px 1px rgba(0,0,0,.4);
+    border:  Solid 1px rgba(0,0,0,.8);*/
+}
+
+.title-fr {
+    /*Contains elements common in both the dark & bright modes*/
+    display: grid;
+    position: relative;
+    background-color: #f6f2f2;
+    box-sizing: border-box;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 15px auto;
+    /*grid-row-gap: 3px;*/
+    color: rgba(80,80,80,1);
+    z-index:9;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 18px;
+    white-space: nowrap;
+    min-width:200px;
+    line-height: 1;
+    border-radius: 2px 2px 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 1px 5px 1px 5px;
+    transition: height .5s ease-in-out;
+}
+.title-fr:hover .windowActions .window-close-button {
+    opacity: 1;
+}
+
+.windowSubtitle {
+    font-weight: 500;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* windowIcon */
+.windowIcon {
+    display: inline-flex;
+    align-items: center;
+}
+.windowIcon span {
+    text-wrap: normal;
+    margin-top: 1px;
+    user-select: none;
+    padding: 0 10px 2px 5px;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.windowIcon img {
+    display: inline-flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.windowIcon span.windowProgramTag:after {
+    content: 'running...';
+    font-size: 12px;
+    padding: 0 7px 0 7px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 13px;
+    color: #3c3f41;
+    margin: 0 5px;
+    display: inline-flex;
+    border-radius: 10px;
+    background-color: rgba(255, 170, 119, 0.8);
+}
+/* windowInfo
+    - todo : windowInfo > windowTitle, windowSubtitle
+*/
+
+/*windowInfo*/
+.title-fr .windowInfo {
+    display: flex;
+    font-size: 14px;
+    align-content: center;
+    justify-content: center;
+    color: #555555;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none;
+    text-overflow: ellipsis;
+    align-items: center;
+}
+.title-fr .windowInfo span span {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+/*windowTitle*/
+.windowInfo .windowTitle {
+    text-align: right;
+    overflow: hidden;
+    font-weight: 500;
+    margin-left: 5px;
+    align-items: center;
+    display: inline-flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+.windowTitle span {
+    padding: 1px 0;
+    align-items: center;
+    display: flex;
+}
+
+/*subTitle*/
+.windowSubtitle {
+    font-weight: 500;
+    overflow: hidden;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+.windowSubtitle span {
+    display: flex;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    align-items: center;
+    overflow: hidden;
+}
+.windowSubtitle::before {
+    content: "";
+    width: 5px;
+    padding-top: 3px;
+    padding-right: 10px;
+    height: 9px;
+    background: url("./nextStep.svg") no-repeat center;
+    background-size: contain;
+}
+/*WindowActions
+    - TODO : .windowIcon .window-close-button
+*/
+.windowActions {
+    display: flex;
+    margin-left: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.windowActions:hover .window-close-button {
+    background-color: #ff6666;
+}
+.windowIcon {
+    width: 14px;
+    height: 14px;
+}
+
+.window-close-button {
+    opacity: 0;
+    border-radius: 1px;
+    display: flex;
+    box-shadow: 0 0 0 1px rgba(230,230,230,.4), inset 0 0 2px 1px rgba(0,0,0,.1);
+    width: 12px;
+    height: 12px;
+    position: relative;
+    background-color: var(--grey-300);
+}
+.window-close-button:hover:after {
+    opacity: .5;
+}
+.window-close-button::after {
+    content: '';
+    opacity: 0;
+    background-image: url("closeHover@2x.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: opacity .12s;
+    -moz-transition: opacity .12s;
+    -ms-transition: opacity .12s;
+    -o-transition: opacity .12s;
+    transition: opacity .12s;
+    display: flex;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+
+.window-close-button:hover {
+    background-color: #ff8280;
+}
+.window-close-button:active {
+    box-shadow: 0 0 0 1px rgba(230,230,230,.4), inset 0 1px 2px 1px rgba(0,0,0,.5);
+}
+
+.windowTools {
+    display: flex;
+    margin-top: 10px;
+}
+.windowTools button {
+    margin-right: 7px;
+}

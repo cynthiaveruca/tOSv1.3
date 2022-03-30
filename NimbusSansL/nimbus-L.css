@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Nimbus Sans L";
+    font-weight: 500;
+    src: url("NimbusSanL-Reg.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Nimbus Sans L";
+    font-weight: 600;
+    src: url("NimbusSanL-Bol.woff") format("woff");
+}
+:root {
+    font-family: "Nimbus Sans L" , sans-serif;
+}

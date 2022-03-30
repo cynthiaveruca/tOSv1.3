@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class=""></div>
+	<script>
+		let arr = [1245,1246,1248];
+		let missingArr = [];
+		for (let i = 0 ; i <= arr.length ; i++) {
+			console.log(i);
+			for (let j = 1 ; j <= arr.length ; j++) {
+				console.log(j)
+				if (arr[j] - arr[i] === 1 || arr[j] - arr[j] === 0) {
+				} else {
+					missingArr.push(arr[i] - arr[j]);
+				}
+			}
+		}
+		console.log(missingArr);
+	</script>
+</body>
+</html>
