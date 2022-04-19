@@ -25,23 +25,66 @@
                     <div class="searchRCategs">Recent</div>
                     <span>
                         <img class="SRicon" src="favicon.png" width="16px" height="16px" alt="">
-                        <span class="SRtitle">Wikimedia</span>
+                        <img class="SRicon" src="Stylesheets/SVG/CanaraMono.svg" width="16px" height="16px" alt="">
+                        <img class="SRicon" src="Stylesheets/SVG/Gmail_icon_(2020).svg" width="16px" height="16px" alt="">
                     </span>
                 </div>
             </div>
         </div>
         <div class="globalMenu">
-            <div class="globalMenuItem">Wikimedia</div>
-            <div class="globalMenuItem">Google</div>
-                <div class="globalMenuItem" style="background-image: linear-gradient(0deg, #F9B746, #ffcb74); color: #3c3f41;">Canara Bank</div>
+            <input id="wikiMedia-radio" class="selectionRadio" type="radio" name="Wikimedia-radio">
+            <label for="wikiMedia-radio" class="selectionLabel globalMenuItem">
+                <img src="Stylesheets/SVG/Wikimedia-logo.svg" width="16px">
+                <span class="GMtitle">WikiMedia</span>
+            </label>
+            <input id="Firefox-radio" class="selectionRadio" type="radio" name="Wikimedia-radio">
+            <label for="Firefox-radio" class="selectionLabel globalMenuItem">
+                <img src="firefox16@2x.png" width="16px">
+                <span class="GMtitle">Mozilla Firefox</span>
+            </label>
+            <input id="Canara-radio" class="selectionRadio" type="radio" name="Wikimedia-radio">
+            <label for="Canara-radio" class="selectionLabel globalMenuItem">
+                <img src="Stylesheets/SVG/CanaraMono.svg" width="16px">
+                <span class="GMtitle">Canara Bank</span>
+            </label>
+        </div>
+        <div class="date&timePanel">
+            <span class="globalMenuItem DnTItem">Tues 3 Sept 10:59</span>
+            <span class="globalMenuItem DnTItem">
+                <img  src="Battery.svg" width="20px" alt="battery">
+                <span style="font-size: 13px">245Days</span>
+            </span>
+            <span class="globalMenuItem DnTItem">Tues 3 Sept 10:59</span>
         </div>
     </div>
-    <div class="st window __drag" style="top: 40px; id=" window"="">
+    <div class="st window __drag" style="top: 6%; left: 35%; id="window">
     <div class="st-Path title-fr __dragheader" id="title-frame">
         <div class="windowIcon">
         </div>
         <div class="windowInfo">
-            <div class="windowTitle">APT Package Manager</div>
+            <div class="windowTitle">
+                <img src="firefox16@2x.png" width="13px" style="margin-right: 5px;">
+                <span>Mozilla Firefox</span>
+            </div>
+        </div>
+        <div class="windowActions">
+            <div class="window-close-button"></div>
+        </div>
+    </div>
+    <div class="st-Path-cont">
+        <iframe src=" https://www.spacejam.com/1996/" frameborder="none" style="width: 800px; height: 550px" header="">
+        </iframe>
+    </div>
+    </div>
+    <div class="st window __drag" style="top: 30%; left: 30%; id="window">
+    <div class="st-Path title-fr __dragheader" id="title-frame">
+        <div class="windowIcon">
+        </div>
+        <div class="windowInfo">
+            <div class="windowTitle">
+                <img src="Stylesheets/SVG/CanaraMono.svg" width="16px" style="margin-right: 5px;">
+                <span>Canara Bank</span>
+            </div>
         </div>
         <div class="windowActions">
             <div class="window-close-button"></div>
@@ -68,33 +111,32 @@
             }
         </style>
         <div class="contAPT">
-            <div class="title">Enter Package Name</div>
+            <img src="Stylesheets/SVG/CanaraChrome.svg" style="margin: 10px">
+            <div class="title">Enter Netbanking ID</div>
             <input type="text" name="package_search" class="workonfocus native-textbox">
-            <button style="margin-top: 5px" class="nimbus-button realtime-button">Install</button>
+            <button style="margin-top: 5px" class="nimbus-button realtime-button">Login</button>
         </div>
         <script type="text/javascript">
             var realTimeButton = document.querySelectorAll(".realtime-button");
-            realTimeButton.forEach(function (el) {
-                el.addEventListener("click", function (evt) {
-                    el.innerText = "Installing...";
-                    el.disabled = true;
-                    setTimeout(function () {
-                        el.innerText = "No Package Found!";
-                        el.classList.add("button-error");
-                    }, 2000);
-                    setTimeout(function () {
-                        el.innerText = "Retry";
-                        el.classList.remove("button-error");
-                        el.disabled = false;
-                        el.focus();
-                        el.addEventListener("click", function () {
-                            location.reload();
-                        })
-                    }, 4000)
+            realTimeButton.forEach( function(el){
+                el.addEventListener("click", function(){
+                        el.innerText = "checking...";
+                        el.disabled = true;
+                        setTimeout(function() {
+                            el.innerText = "Invalid ID!";
+                            el.classList.add("button-error");
+                        }, 2000);
+                        setTimeout(function() {
+                            el.innerText = "Retry";
+                            el.classList.remove("button-error");
+                            el.disabled = false;
+                            el.focus();
+                        }, 4000);
                 })
-            });
+            })
         </script>
     </div>
     </div>
+    <script src="window.js"></script>
 </body>
 </html>
