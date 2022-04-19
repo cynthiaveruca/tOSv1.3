@@ -5,11 +5,13 @@
     <title>Title</title>
     <link rel="stylesheet" href="./Stylesheets/window.css">
     <link rel="stylesheet" href="./Stylesheets/globals.css">
+    <link rel="stylesheet" href="NimbusSansL/nimbus-L.css">
+    <link rel="stylesheet" type="text/css" href="var.css">
 </head>
 <body>
     <div class="title-dark" id="globalStrip">
         <div class="globalSearch">
-            <div id="globalSearch" class="window st">
+            <div id="globalSearch">
                 <span class="searchLabel">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 16">
                       <g class="searchIconG" fill="#6E6E6E" fill-rule="evenodd" transform="translate(1 1)">
@@ -19,9 +21,80 @@
                     </svg>
                 </span>
                 <input type="text" class="workonfocus">
+                <div class="searchResults">
+                    <div class="searchRCategs">Recent</div>
+                    <span>
+                        <img class="SRicon" src="favicon.png" width="16px" height="16px" alt="">
+                        <span class="SRtitle">Wikimedia</span>
+                    </span>
+                </div>
             </div>
         </div>
-        <div class="globalMenu"></div>
+        <div class="globalMenu">
+            <div class="globalMenuItem">Wikimedia</div>
+            <div class="globalMenuItem">Google</div>
+                <div class="globalMenuItem" style="background-image: linear-gradient(0deg, #F9B746, #ffcb74); color: #3c3f41;">Canara Bank</div>
+        </div>
+    </div>
+    <div class="st window __drag" style="top: 40px; id=" window"="">
+    <div class="st-Path title-fr __dragheader" id="title-frame">
+        <div class="windowIcon">
+        </div>
+        <div class="windowInfo">
+            <div class="windowTitle">APT Package Manager</div>
+        </div>
+        <div class="windowActions">
+            <div class="window-close-button"></div>
+        </div>
+    </div>
+    <div class="st-Path-cont">
+        <style type="text/css">
+            .contAPT {
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+            .title {
+                padding-bottom: 5px;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                font-weight: 500;
+                font-size: 12px;
+                color: rgba(0,0,0,.8);
+                line-height: 1;
+            }
+        </style>
+        <div class="contAPT">
+            <div class="title">Enter Package Name</div>
+            <input type="text" name="package_search" class="workonfocus native-textbox">
+            <button style="margin-top: 5px" class="nimbus-button realtime-button">Install</button>
+        </div>
+        <script type="text/javascript">
+            var realTimeButton = document.querySelectorAll(".realtime-button");
+            realTimeButton.forEach(function (el) {
+                el.addEventListener("click", function (evt) {
+                    el.innerText = "Installing...";
+                    el.disabled = true;
+                    setTimeout(function () {
+                        el.innerText = "No Package Found!";
+                        el.classList.add("button-error");
+                    }, 2000);
+                    setTimeout(function () {
+                        el.innerText = "Retry";
+                        el.classList.remove("button-error");
+                        el.disabled = false;
+                        el.focus();
+                        el.addEventListener("click", function () {
+                            location.reload();
+                        })
+                    }, 4000)
+                })
+            });
+        </script>
+    </div>
     </div>
 </body>
 </html>

@@ -8,18 +8,41 @@
     <link rel="stylesheet" href="windows.css">
     <link rel="stylesheet" href="NimbusSansL/nimbus-L.css">
     <title>Document</title>
+    <style type="text/css">
+        :root {
+            --purple : #cec2ed;
+            --yellow : #eec98c;
+            --blue: #2d83ea;
+            --blueb: #0879fe;
+            --orange: #d97d61;
+        }
+        .box {
+            border-radius: 100px;
+            margin: 10px 5px 10px 3px;
+            background-color: var(--yellow);
+            width: 15px;
+            height: 15px;
+            box-shadow: 0 1px 1px rgba(0,0,0,.3), inset 0 0 0 2px rgba(0,0,0,.3);
+        }
+    </style>
 </head>
 <body>
-<div class="dialogue" style="width: 500px; height: 300px">
-    <div class="titleBar">
-        <span>Adobe Illustrator</span>
+<div class="dialogue" style="width: 600px; height: 600px">
+    <div class="titleBar">  
+        <div style="display: flex; align-items: center; line-height: 1">
+        <div class="box">
+
+        </div>
+        <span>Project SpectreFest - New Changes</span>
+        </div>
         <div class="windowClose"></div>
     </div>
-    <div class="dialogue-content" style="position: relative">
-        <span class="preview-tooltip">
-            <span>tripppleOS version1.3</span>
-        </span>
+    <div class="dialogue-content" style="position: relative; height: 100%">
+        
     </div>
 </div>
+<!-- <span class="preview-tooltip">
+            <span>guassian version1.3</span>
+        </span> -->
 </body>
 </html>

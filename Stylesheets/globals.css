@@ -5,23 +5,101 @@
     --focus-ring-color : var(--primary-100);
     --desktop-home-color: #4154d6;
 }
-body {
+*:not(.workonfocus) {
     cursor: url("./cursor.png"), default !important;
+    font-family: Inter, sans-serif;
 }
 #globalSearch {
     height: var(--globalSearchHeight);
     background-color: var(--grey-000);
     position: relative;
+    border-radius: 0;
     border: none;
     transition: height .05s ease-in-out;
     width: 100px;
 }
 #globalSearch:focus-within {
     height: 100px;
+    box-shadow: var(--drop-shadow-depth-2);
     width: 200px;
+    padding-top: 27px;
+    border-radius: 0 0 3px 3px;
+}
+
+/*Search Results Panel*/
+#globalSearch .searchResults {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+}
+.searchRCategs {
+    padding: 1px 6px;
+    height: 15px;
+    font-size: 12px;
+    font-family: Inter,sans-serif;
+    color: rgba(0,0,0,.7);
+}
+.SRtitle {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.SRicon {
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-left: 5px;
+    box-shadow: inset 0 0 1px rgba(0,0,0,.5);
+    background-color: var(--grey-100);
+}
+#globalSearch:focus-within .searchResults {
+    display: flex;
+    opacity: 1;
+}
+#globalSearch .workonfocus {
+    position: absolute;
+    top: 0;
+}
+.searchIconG {
+    fill: rgba(0,0,0,.35);
+}
+.globalMenu {
+    display: flex;
+    font-family: Inter, sans-serif;
+}
+.globalMenuItem {
+    position: relative;
+    font-weight: 500;
+    border-radius: 0;
+    font-size: 14px;
+    user-select: none;
+    line-height: 1;
+    box-shadow: inset -1px 0 1px rgba(255,255,255,.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-width: 100px; */
+    white-space: nowrap;
+    padding: 3px 8px;
+}
+.globalMenuItem:hover {
+    background: linear-gradient(0deg, var(--grey-100), var(--grey-000));
+    color: var(--grey-700);
+    box-shadow: var(--drop-shadow-depth-1);
+}
+.globalMenuItem:active {
+    background: linear-gradient(0deg, var(--grey-000), var(--grey-100));
+    color: var(--grey-700);
+    box-shadow: inset var(--drop-shadow-depth-1);
+}
+
+.searchLabel:hover .searchIconG, #globalSearch:focus-within .searchIconG{
+    fill: rgba(0,0,0,.6);
 }
 .globalSearch {
-    --globalSearchHeight: 19px;
+    --globalSearchHeight: 20px;
     height: var(--globalSearchHeight);
 }
 .workonfocus:focus {
@@ -33,14 +111,14 @@ body {
     margin: 0;
     width: inherit;
     max-width: 200px;
-    padding: 2px 21px 1px 4px;
+    padding: 2px 21px 2px 4px;
     border-radius: 0;
     background-color: var(--grey-000);
     top: -1px;
 }
 .searchLabel {
     position: absolute;
-    top: -1px;
+    top: 0;
     height: var(--globalSearchHeight);
     display: flex;
     justify-content: center;
